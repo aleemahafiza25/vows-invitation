@@ -200,8 +200,7 @@ const secondsElement =
   document.getElementById("seconds");
 
 
-const weddingDate =
-  new Date("2026-10-18T00:00:00");
+const weddingDate = new Date("2026-10-18T11:30:00");
 
 
 function updateCountdown() {

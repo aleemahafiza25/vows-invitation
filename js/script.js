@@ -16,7 +16,7 @@ const storySection = document.getElementById("story");
 const dateReveal = document.getElementById("dateReveal");
 const rsvpForm = document.getElementById("rsvpForm");
 const musicControl = document.getElementById("musicControl");
-
+const weddingMusic = document.getElementById("weddingMusic");
 
 // ---------------------------------------------------------
 // CUSTOM SMOOTH SCROLL
@@ -82,6 +82,17 @@ function openInvitation() {
   }
 
   invitationOpened = true;
+
+weddingMusic.currentTime = 0;
+weddingMusic.volume = 0.3;
+
+weddingMusic.play()
+  .then(() => {
+    console.log("Music started");
+  })
+  .catch(error => {
+    console.error("Music error:", error);
+  });
 
   hero.classList.add("opening");
 
